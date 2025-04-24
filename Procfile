@@ -1,1 +1,1 @@
-worker: python lookup_bot_multi.py
+start: python lookup_bot_multi.py
