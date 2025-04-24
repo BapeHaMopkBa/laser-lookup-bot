@@ -1,0 +1,3 @@
+pyTelegramBotAPI
+gspread
+oauth2client

@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "micro-edge-457711-t2",
+  "private_key_id": "760a03863d1da2cd5d27ee158ce5a5111c3574f3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDCEYvnR/VLQ5l8\nQsjQ5kPjyj6XjyIn6FCjYOrFXh4JWdQr/js9IS7CefdurOjDflJ3ElnYp+ZhgOJG\nCKtOifqBPhBYgEyBl/TzdEISYrQGKaB+VKE28MC7+xo8IUrV7p+Kd65iTxFOxasP\nEL82pkKtUYAznd2Dhvu60QyS8+qkrmSBCvYWOObnqYm31iDcfxwzMq8PcL1rD7o2\nkSTksOqBGcCVfbU+Ark46v7s42CeVY0snqcHha6gs/14ic4nK2aoapv5keHavUqS\nufaTHTdurfMe/x3CJVe6o5xPxcxXxKLdrqRHp7v0HrMk9dP+dhg5TaHzG3CfzXBe\nVSIdhZIrAgMBAAECggEADDfKlQ8EtG5XFWmm9u/oSkkLU8NhJR4NJZwOa8qXHYOY\nRgTFef3C0d+X4lHkfZpQWsq++VLowC67ECmvj0xEhyp/IPNC3c3RUBp7pmisaM7q\nGcn+NFVH7Q3MAwkdiwZw6OjMA8hykIEFWfd18lzZScwdxCImNgejhYlvvzi4BxIP\nhG8HGJXeeaK+vOvG9G74Hy7Hu/hAhcUjmMaBlwvIkCaB8yOqDIiR0jT4hKxAtXpT\nUZN0y4gcjxeqOueUyakCFUQMCRiCgz6D/MOb0NQtmsT4psUR6360SxvVDWuOlOaL\nnxcmS7yK5NvX4lhi/7pyorIJiwj6qvRLrPFM7P+p8QKBgQDuhtGoDYgdvt5NQ+yp\ny0dn5t72LGWuMnA60/9O1RVBH06RO24xO0DNndbVV43/g+/UiAWv6BMtVZvdhJRi\nxxW7CqEd+2/uWBAtEkWNoC9Re7ZxNOLHhM0loVP4rR4oX4/EemyygA/jMYsgahO1\noWtznBDFZBReaYuhJvUzwo09TQKBgQDQSPzm0GrbTrCoTwZi08wVNDKIcd95Ec2y\n416wHerbJYsGDSXnBfILsnucBHio2DFOLctSw8/Q4ph6IcKPqDG7HFoaB0gSTOGH\nhTH8N8zc9KsacEU+gM+1Zh2e15qcXyHZseIvJljE8VAlRRqe6iriVzVmusykhP7C\n2r4AFPIxVwKBgQDuZjVZ/9xRzpklJIR/2DqQMIIcDZe7GZJuWcDNK8/IfN/r7Dhg\nYFaOq/ky1gWIonesNh9pB01TfEMCjiY4675eaWtLKilfUQkp4x89RCLHEBzy3Obk\nf2kC+VGSNIT12T06JRpK9g/rBXOGfD8ixCk/LXbdsv9gtaDm+qcMiqDb6QKBgQCh\nDT7YbqGhkBgTHH/QnPp6DtFgJcTphbWrNBp8TbXS3BXCiRocp8FAADOKMP7nd7uw\nOsKz7Yrcdsn17fLWR/SkPMkCxUyaMe5Vbs12u+LhmyJOoC86pDl3h00yDH6VmQ3A\nmcZONPWA2yLgnq114ZVlTI+TLq+cKuYe3yr5PzkCowKBgFlNjQa4s1YBTnF2ldQH\nMHStNvj+BhiYX+oMvvYzRopxIamuzWs6s31Xvw9bULK6GQT7LoxYEutYpkYfZ4v7\nN29vryZ1b9XiVQKh2+ibON/6Fyn5gyZB75j7h4D3T3c90tO3riwBYBwhFOFa0X7b\nOEz6ZJcbkaEhL3vQ2Uwqd2LT\n-----END PRIVATE KEY-----\n",
+  "client_email": "telegram-reader@micro-edge-457711-t2.iam.gserviceaccount.com",
+  "client_id": "100086332741343840039",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/telegram-reader%40micro-edge-457711-t2.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
