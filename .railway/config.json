@@ -1,0 +1,7 @@
+{
+  "build": {
+    "nixpacks": {
+      "runtime_file": "runtime.txt"
+    }
+  }
+}
