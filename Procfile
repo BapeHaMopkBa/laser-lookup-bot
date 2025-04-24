@@ -1,1 +1,1 @@
-start: python lookup_bot_multi.py
+web: python lookup_bot_multi.py
