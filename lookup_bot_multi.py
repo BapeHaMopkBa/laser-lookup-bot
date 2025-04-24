@@ -152,6 +152,6 @@ def find_score(m):
             pass
         bot.send_message(m.from_user.id, f'❌ Гравця "{nick}" не знайдено.')
 
-if __name__ == '__main__':
-    print("🚀 Lookup-бот (multi-group) запущено…")
-    bot.polling(none_stop=True)
+# if __name__ == '__main__':
+#    print("🚀 Lookup-бот (multi-group) запущено…")
+#    bot.polling(none_stop=True)
