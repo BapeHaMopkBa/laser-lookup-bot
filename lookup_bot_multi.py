@@ -1,25 +1,29 @@
-# lookup_bot_multi.py
-
 import os
+from dotenv import load_dotenv
 import telebot
 from telebot.apihelper import ApiTelegramException
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
-# ————— Налаштування —————
-API_TOKEN      = '8152936119:AAEW50jhOGR5q0JMPiKDM50FztJ5tuqD2ZY'
-SPREADSHEET_ID = '19VYkNmFJCArLFDngYLkpkxF0LYqvDz78yF1oqLT7Ukw'
-CREDS_FILE     = 'micro-edge-457711-t2-760a03863d1d.json'
-EMBLEM_DIR     = 'emblems'  # папка з емблемами
+# ————— Завантажити змінні оточення з .env —————
+load_dotenv()
 
-# chat_id груп → аркуш Google Sheets
+BOT_TOKEN       = os.getenv("BOT_TOKEN")
+SPREADSHEET_ID  = os.getenv("SPREADSHEET_ID")
+CREDS_FILE      = os.getenv("CREDS_FILE", "micro-edge-457711-t2-760a03863d1d.json")
+EMBLEM_DIR      = os.getenv("EMBLEM_DIR", "emblems")
+
+if not BOT_TOKEN or not SPREADSHEET_ID:
+    raise RuntimeError("❌ Не задані BOT_TOKEN або SPREADSHEET_ID у файлі .env")
+
+# ————— Конфіг для бот-логіки —————
 GROUP_SHEETS = {
     -1001499325758: 'kids',
     -1001688878644: 'sundaygames',
 }
-# ——————————————————————
+# ——————————————————————————————
 
-bot = telebot.TeleBot(API_TOKEN)
+bot = telebot.TeleBot(BOT_TOKEN)
 
 # Підключення до Google Sheets
 scope = [
@@ -37,7 +41,6 @@ for chat_id, sheet_name in GROUP_SHEETS.items():
     ws     = sh.worksheet(sheet_name)
     rows   = ws.get_all_values()
     header = [h.strip() for h in rows[0]]
-    # перевірка назв колонок
     try:
         nick_i   = header.index('Nickname')
         points_i = header.index('Points')
@@ -80,7 +83,6 @@ def cmd_start(msg):
 # Основний хендлер
 @bot.message_handler(func=lambda m: True, content_types=['text'])
 def find_score(m):
-    # ігноруємо slash-команди
     if m.text.startswith('/'):
         return
 
@@ -121,7 +123,6 @@ def find_score(m):
         )
         emblem_path = os.path.join(EMBLEM_DIR, emblem_file)
 
-        # в групі: видаляємо повідомлення та відправляємо в приват
         if m.chat.type in ['group', 'supergroup']:
             try:
                 bot.delete_message(cid, m.message_id)
@@ -135,23 +136,19 @@ def find_score(m):
                     if "bot can't initiate conversation" in str(e):
                         bot.send_message(
                             cid,
-                            "❗ Щоб я зміг надіслати тобі результат, відкрий мій приватний чат і натисни /start: t.me/Петро"
+                            "❗ Відкрий мій приватний чат і натисни /start: t.me/Петро"
                         )
                     else:
                         raise
         else:
-            # в особистому чаті
             with open(emblem_path, 'rb') as img:
                 bot.send_photo(cid, img, caption=caption)
-
     else:
-        # гравця не знайдено
         try:
             bot.delete_message(cid, m.message_id)
         except:
             pass
         bot.send_message(m.from_user.id, f'❌ Гравця "{nick}" не знайдено.')
 
-# if __name__ == '__main__':
-#    print("🚀 Lookup-бот (multi-group) запущено…")
-#    bot.polling(none_stop=True)
+# Запуск бота
+bot.polling(none_stop=True)
