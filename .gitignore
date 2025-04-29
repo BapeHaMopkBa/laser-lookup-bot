@@ -1,2 +1,5 @@
 .env
-*.json
+credentials.json
+micro-edge-*.json
+__pycache__/
+*.pyc
