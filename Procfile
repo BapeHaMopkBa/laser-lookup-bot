@@ -1,2 +1,1 @@
-worker: python lookup_bot_multi.py
-
+web: python run_webhook.py
